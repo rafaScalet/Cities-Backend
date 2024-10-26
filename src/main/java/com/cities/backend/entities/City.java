@@ -74,4 +74,13 @@ public class City {
     this.population = population;
   }
 
+  public City(String name, String state, String country, Integer age, Double area, Integer population) {
+    this.name = name;
+    this.state = state;
+    this.country = country;
+    this.age = age;
+    this.area = area;
+    this.population = population;
+  }
+
 }
