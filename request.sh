@@ -7,6 +7,8 @@ case $1 in
     http GET $URL/cities;;
   "get-city")
     http GET $URL/city/1;;
+  "delete-city")
+    http DELETE $URL/city/1;;
   *)
     echo route not found in $URL;;
 esac

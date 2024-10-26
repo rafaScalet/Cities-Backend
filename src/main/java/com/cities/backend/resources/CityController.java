@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,6 +26,12 @@ public class CityController {
   @GetMapping("city/{id}")
   public ResponseEntity<CityResponse> getCity (@PathVariable int id) {
     return ResponseEntity.ok(this.service.getCity(id));
+  }
+
+  @DeleteMapping("city/{id}")
+  public ResponseEntity<Void> deleteCity (@PathVariable int id) {
+    this.service.deleteCity(id);
+    return ResponseEntity.noContent().build();
   }
 
 }

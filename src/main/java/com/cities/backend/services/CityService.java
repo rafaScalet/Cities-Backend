@@ -14,6 +14,8 @@ import jakarta.persistence.EntityNotFoundException;
 @Service
 public class CityService {
 
+  private String message = "City not Found";
+
   @Autowired
   private CitiesRepository repository;
 
@@ -22,7 +24,16 @@ public class CityService {
   }
 
   public CityResponse getCity (int id) {
-    return CityMapper.toDTO(this.repository.findById(id).orElseThrow(() -> new EntityNotFoundException("City not found")));
+    return CityMapper.toDTO(this.repository.findById(id).orElseThrow(() -> new EntityNotFoundException(message)));
+  }
+
+  public void deleteCity (int id) {
+    if (repository.existsById(id)) {
+      repository.deleteById(id);
+      return;
+    }
+
+    throw new EntityNotFoundException(message);
   }
 
 }
