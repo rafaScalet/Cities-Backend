@@ -9,6 +9,8 @@ import com.cities.backend.dtos.CityResponse;
 import com.cities.backend.mappers.CityMapper;
 import com.cities.backend.repositories.CitiesRepository;
 
+import jakarta.persistence.EntityNotFoundException;
+
 @Service
 public class CityService {
 
@@ -17,6 +19,10 @@ public class CityService {
 
   public List<CityResponse> getCities () {
     return this.repository.findAll().stream().map(item -> CityMapper.toDTO(item)).toList();
+  }
+
+  public CityResponse getCity (int id) {
+    return CityMapper.toDTO(this.repository.findById(id).orElseThrow(() -> new EntityNotFoundException("City not found")));
   }
 
 }
