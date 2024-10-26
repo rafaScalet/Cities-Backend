@@ -74,6 +74,8 @@ public class City {
     this.population = population;
   }
 
+  public City () {}
+
   public City(String name, String state, String country, Integer age, Double area, Integer population) {
     this.name = name;
     this.state = state;
