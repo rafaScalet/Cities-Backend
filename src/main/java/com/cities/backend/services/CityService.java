@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.cities.backend.dtos.CityRequest;
 import com.cities.backend.dtos.CityResponse;
+import com.cities.backend.entities.City;
 import com.cities.backend.mappers.CityMapper;
 import com.cities.backend.repositories.CitiesRepository;
 
@@ -39,6 +40,19 @@ public class CityService {
     }
 
     throw new EntityNotFoundException(message);
+  }
+
+  public void updateCity (int id, CityRequest request) {
+    City temp = repository.getReferenceById(id);
+
+    temp.setAge(request.age());
+    temp.setArea(request.area());
+    temp.setCountry(request.country());
+    temp.setName(request.name());
+    temp.setPopulation(request.population());
+    temp.setState(request.state());
+
+    repository.save(temp);
   }
 
 }

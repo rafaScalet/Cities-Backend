@@ -18,6 +18,15 @@ case $1 in
       area:=400.0 \
       population:=4000
     ;;
+    "put-city")
+      http PUT $URL/city/2 \
+        name="cidade 2 editado" \
+        state="estado 2 editado" \
+        country="país 2 editado" \
+        age:=200 \
+        area:=2000.0 \
+        population:=20000
+      ;;
   *)
     echo route not found in $URL;;
 esac
