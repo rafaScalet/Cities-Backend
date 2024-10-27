@@ -1,0 +1,120 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "City-Backend",
+    "collectionId": "90262c04-fb5c-49a7-9ad1-83fe4099e091",
+    "dateExported": "2024-10-27T12:38:26.451Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d614682d-ec0a-45c8-afa0-40d523eb1b0f",
+            "colId": "90262c04-fb5c-49a7-9ad1-83fe4099e091",
+            "containerId": "",
+            "name": "cities",
+            "url": "cities",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-10-26T14:01:12.436Z",
+            "modified": "2024-10-26T14:01:48.936Z",
+            "headers": []
+        },
+        {
+            "_id": "00ce0574-3cf1-4942-b4d7-fa3b4363c25a",
+            "colId": "90262c04-fb5c-49a7-9ad1-83fe4099e091",
+            "containerId": "",
+            "name": "city",
+            "url": "city/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-10-26T14:01:12.437Z",
+            "modified": "2024-10-26T14:02:46.217Z",
+            "headers": []
+        },
+        {
+            "_id": "2fcde7ea-4603-4d74-92e1-6d580516e3ef",
+            "colId": "90262c04-fb5c-49a7-9ad1-83fe4099e091",
+            "containerId": "",
+            "name": "city",
+            "url": "city",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-10-26T14:01:12.438Z",
+            "modified": "2024-10-27T12:14:49.584Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"cidade 4\",\n  \"state\": \"estado 4\",\n  \"country\": \"país 4\",\n  \"age\": 40,\n  \"area\": 400.0,\n  \"population\": 4000\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "40e137fd-caba-4038-8a39-c1efb27b818f",
+            "colId": "90262c04-fb5c-49a7-9ad1-83fe4099e091",
+            "containerId": "",
+            "name": "city",
+            "url": "city/4",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-10-26T14:01:12.440Z",
+            "modified": "2024-10-27T12:14:28.795Z",
+            "headers": []
+        },
+        {
+            "_id": "2f89b22c-a029-4d4e-87e1-9aa75172c26f",
+            "colId": "90262c04-fb5c-49a7-9ad1-83fe4099e091",
+            "containerId": "",
+            "name": "city (error all null)",
+            "url": "city",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-10-27T12:26:55.209Z",
+            "modified": "2024-10-27T12:27:39.978Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"\",\n  \"state\": \"\",\n  \"country\": \"\",\n  \"age\": null,\n  \"area\": null,\n  \"population\": null\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "ee0bc658-332e-43b0-98de-1c84cda38bb1",
+            "colId": "90262c04-fb5c-49a7-9ad1-83fe4099e091",
+            "containerId": "",
+            "name": "city",
+            "url": "city/2",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-10-26T14:01:12.441Z",
+            "modified": "2024-10-27T12:15:38.773Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"cidade 2 editado\",\n  \"state\": \"estado 2 editado\",\n  \"country\": \"país 2 editado\",\n  \"age\": 200,\n  \"area\": 2000.0,\n  \"population\": 20000\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "7577b963-8559-405a-b92b-023946787188",
+            "colId": "90262c04-fb5c-49a7-9ad1-83fe4099e091",
+            "containerId": "",
+            "name": "city (error min size)",
+            "url": "city",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-10-27T12:31:30.133Z",
+            "modified": "2024-10-27T12:32:42.803Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"a\",\n  \"state\": \"a\",\n  \"country\": \"a\",\n  \"age\": 1,\n  \"area\": 1,\n  \"population\": 1\n}",
+                "form": []
+            }
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "http://localhost:8080/"
+        }
+    },
+    "ref": "GVoMPC4csiS4pmvPNrfCdehtA9Vi5ezoHSpHRaJYS4PL2Z2dGyW9SEyOp0v11qn-oBX1tUj1FpMu5POsDlb7qQ"
+}

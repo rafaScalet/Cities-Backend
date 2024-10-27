@@ -18,6 +18,8 @@ import com.cities.backend.dtos.CityRequest;
 import com.cities.backend.dtos.CityResponse;
 import com.cities.backend.services.CityService;
 
+import jakarta.validation.Valid;
+
 @RestController
 public class CityController {
 
@@ -35,7 +37,7 @@ public class CityController {
   }
 
   @PostMapping("city")
-  public ResponseEntity<CityResponse> postCity (@RequestBody CityRequest city) {
+  public ResponseEntity<CityResponse> postCity (@Valid @RequestBody CityRequest city) {
     CityResponse createdCity = this.service.saveCity(city);
 
     URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(createdCity.id()).toUri();
