@@ -1,0 +1,22 @@
+meta {
+  name: city
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/city
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "cidade 4",
+    "state": "estado 4",
+    "country": "país 4",
+    "age": 40,
+    "area": 400,
+    "population": 4000
+  }
+}
